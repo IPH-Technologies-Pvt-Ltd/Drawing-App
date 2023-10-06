@@ -1,0 +1,74 @@
+<div class="main-card">
+<div class="container">
+    <section class="tools-board">
+    <div class="row">
+        <label class="title fw-bolder">
+        Shapes
+        </label>
+        <ul class="options">
+            <li class="option tool" id="rectangle">
+                <img src="../../assets/rectangle.png" alt="avatar_img" class="my-img">
+                <span class="fw-semibold">Rectangle</span>
+            </li>
+            <li class="option tool" id="circle">
+                <img src="../../assets/dry-clean.png" alt="avatar_img" class="my-img">
+                <span class="fw-semibold">Circle</span>
+            </li>
+            <li class="option tool" id="triangle">
+                <img src="../../assets/bleach.png" alt="avatar_img" class="my-img">
+                <span class="fw-semibold">Triangle</span>
+            </li>
+            <li class="option">
+            <input type="checkbox" id="fillColor" #fillColor/>
+                <label for="fillColor">Filled</label>
+            </li>
+        </ul>
+    </div>
+    <div class="row">
+        <label class="title">
+        option
+        </label>
+        <ul class="options">
+            <li class="option active tool" id="brush">
+                <img src="../../assets/pencil.png" alt="avatar_img" class="my-img">
+                <span class="fw-semibold">Brush</span>
+            </li>
+            <li class="option tool" id="eraser">
+                <img src="../../assets/erase.png" alt="avatar_img" class="my-img">
+                <span class="fw-semibold">Eraser</span>
+            </li>
+            <li class="option">
+            <input type="range" id="sizeSlider" min="1" max="10" value="5" />
+            </li>
+        </ul>
+    </div>
+    <div class="row colors">
+        <label class="title fw-semibold">
+            <img src="../../assets/paint-palette.png" alt="avatar_img" class="my-img">
+
+        Color
+        </label>
+        <ul class="options">
+            <li class="option">
+            </li>
+            <li class="option selected">
+            </li>
+            <li class="option">
+            </li>
+            <li class="option">
+            </li>
+            <li class="option">
+                <input type="color" value="#4A98F7" id="colorPicker">
+            </li>
+        </ul>
+    </div>
+    <div class="row">
+       <button class="btn btn-primary mb-2 fs-6 fw-bolder" (click)="clearCanvas()">Clear Canvas</button>
+       <button class="btn btn-dark fs-6 fw-bolder" (click)="saveAsImage()">Save as Image</button>
+    </div>
+    </section>
+    <section class="drawing-board">
+        <canvas #canvas></canvas>
+    </section>
+   </div>
+</div>
